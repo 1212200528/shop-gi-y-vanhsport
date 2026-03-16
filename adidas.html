@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Adidas Elite - Viet Anh Sport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">VIET ANH <span>SPORT</span></div>
+        <nav>
+            <a href="index.html">TRANG CHỦ</a>
+            <a href="nike.html">NIKE</a>
+            <a href="adidas.html" class="active">ADIDAS</a>
+            <a href="puma.html">PUMA</a>
+        </nav>
+    </header>
+
+    <main class="product-section">
+        <h2 class="section-title">GIÀY ADIDAS ELITE CHÍNH HÃNG</h2>
+        <div class="product-grid">
+            <div class="shoe-card">
+                <span class="badge">ELITE FG</span>
+                <div class="shoe-img-container">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cb7c413b53f6492d9d1341c59911e3b5_9366/IF1393_01_standard.jpg" alt="Adidas F50">
+                </div>
+                <h4>Adidas F50 Elite FG - Fast Reborn</h4>
+                <p class="price">4.890.000đ</p>
+                <button class="btn-buy">MUA NGAY</button>
+            </div>
+
+            <div class="shoe-card">
+                <span class="badge">ELITE FG</span>
+                <div class="shoe-img-container">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5801962a78f244acbb8e0f6e1e353ac0_9366/IF8822_01_standard.jpg" alt="Adidas Copa">
+                </div>
+                <h4>Adidas Copa Pure 2 Elite FG</h4>
+                <p class="price">4.450.000đ</p>
+                <button class="btn-buy">MUA NGAY</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+3. File style.css (Quan trọng để ảnh hiển thị đẹp)
+Hãy đảm bảo phần CSS của ảnh giày được cập nhật như sau để hình ảnh không bị méo:
+
+CSS
+.shoe-img-container {
+    width: 100%;
+    height: 200px; /* Độ cao khung ảnh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #252525; /* Nền tối cho ảnh nổi bật */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.shoe-img-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Giữ nguyên tỉ lệ ảnh giày */
+    transition: transform 0.5s;
+}
+
+.shoe-card:hover img {
+    transform: scale(1.1) rotate(-5deg); /* Hiệu ứng nghiêng giày khi di chuột */
+}
